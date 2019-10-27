@@ -450,8 +450,8 @@ kCmb144:=flag_R|flag_G	; ・
 resultOfKCmb144=/
 kCmb145:=flag_S|flag_D	; [
 resultOfKCmb145=[
-kCmb146:=flag_D|flag_F	; ,
-resultOfKCmb146=`,
+; kCmb146:=flag_D|flag_F	; ,
+; resultOfKCmb146=`,
 kCmb147:=flag_F|flag_G	; 「」
 resultOfKCmb147=[]{Enter}{Left}
 kCmb148:=flag_D|flag_V	; @
@@ -470,8 +470,8 @@ kCmb154:=flag_I|flag_J	; :
 resultOfKCmb154=`:
 kCmb155:=flag_H|flag_J	; （）
 resultOfKCmb155=+8+9{Enter}{Left}
-kCmb156:=flag_J|flag_K	; .
-resultOfKCmb156=.
+; kCmb156:=flag_J|flag_K	; .
+; resultOfKCmb156=.
 kCmb157:=flag_K|flag_L	; ]
 resultOfKCmb157=]
 kCmb158:=flag_K|flag_N	; \
@@ -688,5 +688,4 @@ sc033 ::onKeyDown("_Comma")
 -::onKeyDown("_Hiphen")
 
 #UseHook Off
-
 
