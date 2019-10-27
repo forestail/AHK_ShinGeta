@@ -689,3 +689,18 @@ sc033 ::onKeyDown("_Comma")
 
 #UseHook Off
 
+
++^h::
+	InputBox, UserInput, Help, Please input target character., , 340, 280
+	If (ErrorLevel = 0)
+	{
+		; MsgBox, You entered "%UserInput%"
+		Switch UserInput
+		{
+			Case "a":
+				MsgBox, D + J
+			Case "i":
+				MsgBox, K
+		}
+	}		
+Return
