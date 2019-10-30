@@ -1,4 +1,4 @@
-#Include, IME.ahk
+﻿#Include IME.ahk
 
 ;=============================
 ; タイマー入り 同時打鍵スクリプト
@@ -703,12 +703,12 @@ sc033::onKeyDown("_Comma")
 
 #UseHook Off
 
-
+;ヘルパー機能
 +^h::
 	ime_mode := IME_GET()
 	IME_SET(0)
 
-	InputBox, UserInput, 補助, 入力方法を調べたい文字のローマ字を入力, , 300, 120
+	InputBox, UserInput, 補助, 入力方法を調べたい文字のローマ字を入力, , 300, 130
 	If (ErrorLevel = 0)
 	{
 		; MsgBox, You entered "%UserInput%"
