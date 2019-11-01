@@ -2,23 +2,35 @@
 
 ;=============================
 ; タイマー入り 同時打鍵スクリプト
-;　　+ IME 状態チェック GUIThreadInfo 利用バージョン
+;　　+ IME 状態チェック IME.ahk 利用バージョン
 ;
 ; [注意] 
-; IE や Firefox などの右クリックやシステムメニューで IME チェックがだまされることがあります
-; 「:」キーはこのスクリプトでは変更されません。別途設定してください
-; 記号シフトがいい加減です（詳しくは L.411-450 ）
 ; Ctrl+Esc でスクリプトの停止・再開ができます
-;
+; Ctrl+F12 でタイピングモードの切り替えができます
 ;=============================
+
+; メニュー追加
+Menu, Tray, Add
+Menu, Tray, Add, Typing Mode, Menu_Typing
+
+global MenuTypingValue := 0
+Menu, Tray, Uncheck, Typing Mode
+
+Menu_Typing(){
+  if(MenuTypingValue = 1){
+    Menu, Tray, Uncheck, Typing Mode
+    MenuTypingValue=0
+  }else{
+    Menu, Tray, Check, Typing Mode
+    MenuTypingValue=1
+  }
+}
 
 ; Maximal Gap Time は同時打鍵判定用の時定数です
 ; この時間(ms)内に次の入力があった場合は「同時」と見なします
-
 MaximalGT:=70
 
 ; Single Key Wait はキーを押してからタイマーで確定するまでの時間です
-
 SingleKeyWait:=MaximalGT
 
 ; 以下でシングルストロークで send する文字列を定義します
@@ -611,7 +623,7 @@ Return
 onKeyDown(keyName){
 	global gDownKeyName
 
-    if( IME_GET() )
+    if( IME_GET() || MenuTypingValue)
 	{
 		gDownKeyName:=keyName
 		GoSub onOnKeyDown
@@ -657,6 +669,9 @@ Return
 #UseHook On
 
 ^Esc::Suspend,Toggle
+^F12::
+	Menu_Typing()
+Return
 
 q::onKeyDown("_Q")
 w::onKeyDown("_W")
@@ -702,6 +717,8 @@ sc033::onKeyDown("_Comma")
 ]::onKeyDown("_RBracket")
 
 #UseHook Off
+
+
 
 ;ヘルパー機能
 +^h::
