@@ -1,4 +1,4 @@
-﻿#Include IME.ahk
+﻿#Include  %A_ScriptDir%\IME.ahk
 
 ;=============================
 ; タイマー入り 同時打鍵スクリプト
