@@ -16,6 +16,7 @@
 ; メニュー追加
 Menu, Tray, Add
 Menu, Tray, Add, Typing Mode, Menu_Typing
+Menu, Tray, Icon, %A_ScriptDir%\ShinGeta_on.ico , ,1
 
 global MenuTypingValue := 0
 Menu, Tray, Uncheck, Typing Mode
@@ -672,7 +673,17 @@ Return
 ; 以下ホットキー定義
 #UseHook On
 
-^Esc::Suspend,Toggle
+^Esc::
+	Suspend,Toggle
+	if(A_IsSuspended = 1) 
+	{
+		Menu, Tray, Icon, %A_ScriptDir%\ShinGeta_off.ico , ,1
+	}
+	else
+	{
+		Menu, Tray, Icon, %A_ScriptDir%\ShinGeta_on.ico , ,1
+	}
+Return
 ^F12::
 	Menu_Typing()
 Return
