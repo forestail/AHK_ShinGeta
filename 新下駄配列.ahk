@@ -81,6 +81,8 @@ singleStroke_8=8	;８
 singleStroke_9=9	;９
 singleStroke_0=0	;０
 singleStroke_Hiphen=-	;ー
+singleStroke_RBracket=]
+singleStroke_Colon={BackSpace}
 
 ; 以下は IME がローマ字モードじゃないときに出力する文字です
 
@@ -175,6 +177,7 @@ flag_9:=1<<42
 flag_0:=1<<43
 flag_Hiphen:=1<<45
 flag_RBracket:=1<<46
+flag_Colon:=1<<47
 
 ; 同時打鍵の定義
 
@@ -309,26 +312,26 @@ kCmb64:=flag_I|flag_W	; しゅ
 resultOfKCmb64=shu
 kCmb65:=flag_I|flag_E	; しょ
 resultOfKCmb65=syo
-kCmb66:=flag_E|flag_Y	; ひゃ
-resultOfKCmb66=hya
-kCmb67:=flag_E|flag_H	; ひょ
-resultOfKCmb67=hyo
-kCmb68:=flag_E|flag_N	; ひゅ
-resultOfKCmb68=hyu
-kCmb69:=flag_E|flag_U	; きゃ
-resultOfKCmb69=kya
-kCmb70:=flag_E|flag_J	; きょ
-resultOfKCmb70=kyo
-kCmb71:=flag_E|flag_M	; きゅ
-resultOfKCmb71=kyu
-kCmb72:=flag_E|flag_SColon	; ひぇ
-resultOfKCmb72=hye
-kCmb73:=flag_E|flag_Comma	; てゃ
-resultOfKCmb73=tha
-kCmb74:=flag_E|flag_Dot	; てゅ
-resultOfKCmb74=thu
-kCmb75:=flag_E|flag_Slash	; てょ
-resultOfKCmb75=tho
+; kCmb66:=flag_E|flag_Y	; ひゃ
+; resultOfKCmb66=hya
+; kCmb67:=flag_E|flag_H	; ひょ
+; resultOfKCmb67=hyo
+; kCmb68:=flag_E|flag_N	; ひゅ
+; resultOfKCmb68=hyu
+; kCmb69:=flag_E|flag_U	; きゃ
+; resultOfKCmb69=kya
+; kCmb70:=flag_E|flag_J	; きょ
+; resultOfKCmb70=kyo
+; kCmb71:=flag_E|flag_M	; きゅ
+; resultOfKCmb71=kyu
+; kCmb72:=flag_E|flag_SColon	; ひぇ
+; resultOfKCmb72=hye
+; kCmb73:=flag_E|flag_Comma	; てゃ
+; resultOfKCmb73=tha
+; kCmb74:=flag_E|flag_Dot	; てゅ
+; resultOfKCmb74=thu
+; kCmb75:=flag_E|flag_Slash	; てょ
+; resultOfKCmb75=tho
 kCmb76:=flag_O|flag_R	; ぎゅ
 resultOfKCmb76=gyu
 kCmb77:=flag_O|flag_F	; ぎょ
@@ -355,110 +358,110 @@ kCmb87:=flag_O|flag_W	; じゅ
 resultOfKCmb87=ju
 kCmb88:=flag_O|flag_E	; じょ
 resultOfKCmb88=jo
-kCmb89:=flag_W|flag_Y	; びゃ
-resultOfKCmb89=bya
-kCmb90:=flag_W|flag_H	; びょ
-resultOfKCmb90=byo
-kCmb91:=flag_W|flag_N	; びゅ
-resultOfKCmb91=byu
-kCmb92:=flag_W|flag_U	; ぎゃ
-resultOfKCmb92=gya
-kCmb93:=flag_W|flag_J	; ぎょ
-resultOfKCmb93=gyo
-kCmb94:=flag_W|flag_M	; ぎゅ
-resultOfKCmb94=gyu
-kCmb95:=flag_W|flag_SColon	; びぇ
-resultOfKCmb95=bye
-kCmb96:=flag_W|flag_Comma	; でゃ
-resultOfKCmb96=dha
-kCmb97:=flag_W|flag_Dot	; でゅ
-resultOfKCmb97=dhu
-kCmb98:=flag_W|flag_Slash	; でょ
-resultOfKCmb98=dho
-kCmb99:=flag_SColon|flag_R	; りゃ
-resultOfKCmb99=rya
-kCmb100:=flag_SColon|flag_F	; りょ
-resultOfKCmb100=ryo
-kCmb101:=flag_SColon|flag_V	; りゅ
-resultOfKCmb101=ryu
-kCmb102:=flag_SColon|flag_T	; みゃ
-resultOfKCmb102=mya
-kCmb103:=flag_SColon|flag_G	; みょ
-resultOfKCmb103=myo
-kCmb104:=flag_SColon|flag_B	; みゅ
-resultOfKCmb104=myu
-kCmb105:=flag_SColon|flag_A	; つぁ
-resultOfKCmb105=tsa
-kCmb106:=flag_SColon|flag_Z	; つぃ
-resultOfKCmb106=tsi
-kCmb107:=flag_SColon|flag_X	; つぇ
-resultOfKCmb107=tse
-kCmb108:=flag_SColon|flag_C	; つぉ
-resultOfKCmb108=tso
-kCmb109:=flag_SColon|flag_Q	; りぇ
-resultOfKCmb109=rye
-kCmb110:=flag_A|flag_Y	; ぴゃ
-resultOfKCmb110=pya
-kCmb111:=flag_A|flag_H	; ぴょ
-resultOfKCmb111=pyo
-kCmb112:=flag_A|flag_N	; ぴゅ
-resultOfKCmb112=pyu
-kCmb113:=flag_A|flag_U	; にゃ
-resultOfKCmb113=nya
-kCmb114:=flag_A|flag_J	; にょ
-resultOfKCmb114=nyo
-kCmb115:=flag_A|flag_M	; にゅ
-resultOfKCmb115=nyu
-kCmb116:=flag_A|flag_Comma	; いぇ
-resultOfKCmb116=ye
-kCmb117:=flag_A|flag_Dot	; にぇ
-resultOfKCmb117=nye
-kCmb118:=flag_A|flag_Slash	; みぇ
-resultOfKCmb118=mye
-kCmb119:=flag_A|flag_P	; ぴぇ
-resultOfKCmb119=pye
-kCmb120:=flag_J|flag_R	; しぇ
-resultOfKCmb120=sye
-kCmb121:=flag_J|flag_T	; じぇ
-resultOfKCmb121=je
-kCmb122:=flag_J|flag_G	; てぃ
-resultOfKCmb122=thi
-kCmb123:=flag_J|flag_V	; ふぁ
-resultOfKCmb123=fa
-kCmb124:=flag_J|flag_B	; ふぃ
-resultOfKCmb124=fi
-kCmb125:=flag_J|flag_Z	; うぃ
-resultOfKCmb125=wi
-kCmb126:=flag_J|flag_X	; うぇ
-resultOfKCmb126=we
-kCmb127:=flag_J|flag_C	; うぉ
-resultOfKCmb127=who
-kCmb128:=flag_F|flag_Y	; ぢぇ
-resultOfKCmb128=dile
-kCmb129:=flag_F|flag_U	; ちぇ
-resultOfKCmb129=che
-kCmb130:=flag_F|flag_H	; でぃ
-resultOfKCmb130=dhi
-kCmb131:=flag_F|flag_N	; ふぇ
-resultOfKCmb131=fe
-kCmb132:=flag_F|flag_M	; ふぉ
-resultOfKCmb132=fo
-kCmb133:=flag_F|flag_Comma	; とぅ
-resultOfKCmb133=twu
-kCmb134:=flag_F|flag_Dot	; どぅ
-resultOfKCmb134=dwu
-kCmb135:=flag_F|flag_Slash	; ふゅ
-resultOfKCmb135=fyu
-kCmb136:=flag_AT|flag_A	; ヴぁ
-resultOfKCmb136=va
-kCmb137:=flag_AT|flag_S	; ヴぃ
-resultOfKCmb137=vi
-kCmb138:=flag_AT|flag_D	; うぉ
-resultOfKCmb138=uxo
-kCmb139:=flag_AT|flag_F	; ヴぇ
-resultOfKCmb139=ve
-kCmb140:=flag_AT|flag_G	; ヴぉ
-resultOfKCmb140=vo
+; kCmb89:=flag_W|flag_Y	; びゃ
+; resultOfKCmb89=bya
+; kCmb90:=flag_W|flag_H	; びょ
+; resultOfKCmb90=byo
+; kCmb91:=flag_W|flag_N	; びゅ
+; resultOfKCmb91=byu
+; kCmb92:=flag_W|flag_U	; ぎゃ
+; resultOfKCmb92=gya
+; kCmb93:=flag_W|flag_J	; ぎょ
+; resultOfKCmb93=gyo
+; kCmb94:=flag_W|flag_M	; ぎゅ
+; resultOfKCmb94=gyu
+; kCmb95:=flag_W|flag_SColon	; びぇ
+; resultOfKCmb95=bye
+; kCmb96:=flag_W|flag_Comma	; でゃ
+; resultOfKCmb96=dha
+; kCmb97:=flag_W|flag_Dot	; でゅ
+; resultOfKCmb97=dhu
+; kCmb98:=flag_W|flag_Slash	; でょ
+; resultOfKCmb98=dho
+; kCmb99:=flag_SColon|flag_R	; りゃ
+; resultOfKCmb99=rya
+; kCmb100:=flag_SColon|flag_F	; りょ
+; resultOfKCmb100=ryo
+; kCmb101:=flag_SColon|flag_V	; りゅ
+; resultOfKCmb101=ryu
+; kCmb102:=flag_SColon|flag_T	; みゃ
+; resultOfKCmb102=mya
+; kCmb103:=flag_SColon|flag_G	; みょ
+; resultOfKCmb103=myo
+; kCmb104:=flag_SColon|flag_B	; みゅ
+; resultOfKCmb104=myu
+; kCmb105:=flag_SColon|flag_A	; つぁ
+; resultOfKCmb105=tsa
+; kCmb106:=flag_SColon|flag_Z	; つぃ
+; resultOfKCmb106=tsi
+; kCmb107:=flag_SColon|flag_X	; つぇ
+; resultOfKCmb107=tse
+; kCmb108:=flag_SColon|flag_C	; つぉ
+; resultOfKCmb108=tso
+; kCmb109:=flag_SColon|flag_Q	; りぇ
+; resultOfKCmb109=rye
+; kCmb110:=flag_A|flag_Y	; ぴゃ
+; resultOfKCmb110=pya
+; kCmb111:=flag_A|flag_H	; ぴょ
+; resultOfKCmb111=pyo
+; kCmb112:=flag_A|flag_N	; ぴゅ
+; resultOfKCmb112=pyu
+; kCmb113:=flag_A|flag_U	; にゃ
+; resultOfKCmb113=nya
+; kCmb114:=flag_A|flag_J	; にょ
+; resultOfKCmb114=nyo
+; kCmb115:=flag_A|flag_M	; にゅ
+; resultOfKCmb115=nyu
+; kCmb116:=flag_A|flag_Comma	; いぇ
+; resultOfKCmb116=ye
+; kCmb117:=flag_A|flag_Dot	; にぇ
+; resultOfKCmb117=nye
+; kCmb118:=flag_A|flag_Slash	; みぇ
+; resultOfKCmb118=mye
+; kCmb119:=flag_A|flag_P	; ぴぇ
+; resultOfKCmb119=pye
+; kCmb120:=flag_J|flag_R	; しぇ
+; resultOfKCmb120=sye
+; kCmb121:=flag_J|flag_T	; じぇ
+; resultOfKCmb121=je
+; kCmb122:=flag_J|flag_G	; てぃ
+; resultOfKCmb122=thi
+; kCmb123:=flag_J|flag_V	; ふぁ
+; resultOfKCmb123=fa
+; kCmb124:=flag_J|flag_B	; ふぃ
+; resultOfKCmb124=fi
+; kCmb125:=flag_J|flag_Z	; うぃ
+; resultOfKCmb125=wi
+; kCmb126:=flag_J|flag_X	; うぇ
+; resultOfKCmb126=we
+; kCmb127:=flag_J|flag_C	; うぉ
+; resultOfKCmb127=who
+; kCmb128:=flag_F|flag_Y	; ぢぇ
+; resultOfKCmb128=dile
+; kCmb129:=flag_F|flag_U	; ちぇ
+; resultOfKCmb129=che
+; kCmb130:=flag_F|flag_H	; でぃ
+; resultOfKCmb130=dhi
+; kCmb131:=flag_F|flag_N	; ふぇ
+; resultOfKCmb131=fe
+; kCmb132:=flag_F|flag_M	; ふぉ
+; resultOfKCmb132=fo
+; kCmb133:=flag_F|flag_Comma	; とぅ
+; resultOfKCmb133=twu
+; kCmb134:=flag_F|flag_Dot	; どぅ
+; resultOfKCmb134=dwu
+; kCmb135:=flag_F|flag_Slash	; ふゅ
+; resultOfKCmb135=fyu
+; kCmb136:=flag_AT|flag_A	; ヴぁ
+; resultOfKCmb136=va
+; kCmb137:=flag_AT|flag_S	; ヴぃ
+; resultOfKCmb137=vi
+; kCmb138:=flag_AT|flag_D	; うぉ
+; resultOfKCmb138=uxo
+; kCmb139:=flag_AT|flag_F	; ヴぇ
+; resultOfKCmb139=ve
+; kCmb140:=flag_AT|flag_G	; ヴぉ
+; resultOfKCmb140=vo
 kCmb141:=flag_W|flag_E	; (
 resultOfKCmb141=(
 kCmb142:=flag_E|flag_R	; !
@@ -730,6 +733,7 @@ sc033::onKeyDown("_Comma")
 0::onKeyDown("_0")
 -::onKeyDown("_Hiphen")
 ]::onKeyDown("_RBracket")
+:::onKeyDown("_Colon")
 
 #UseHook Off
 
@@ -1080,15 +1084,15 @@ sc033::onKeyDown("_Comma")
 		{
 			MsgBox, V + I
 		}
-		Else If (UserInput = "cyu")
+		Else If (UserInput = "cyu" || UserInput = "tyu" || UserInput = "chu")
 		{
 			MsgBox, T + I
 		}
-		Else If (UserInput = "cyo")
+		Else If (UserInput = "cyo" || UserInput = "tyo" || UserInput = "cho")
 		{
 			MsgBox, G + I
 		}
-		Else If (UserInput = "cya")
+		Else If (UserInput = "cya" || UserInput = "tya" || UserInput = "cha")
 		{
 			MsgBox, B + I
 		}
