@@ -743,7 +743,9 @@ sc033::onKeyDown("_Comma")
 +^h::
 	ime_mode := IME_GET()
 	IME_SET(0)
+	curTypingMode := MenuTypingValue
 
+	MenuTypingValue = 0
 	InputBox, UserInput, 補助, 入力方法を調べたい文字のローマ字を入力, , 300, 130
 	If (ErrorLevel = 0)
 	{
@@ -1060,15 +1062,15 @@ sc033::onKeyDown("_Comma")
 		{
 			MsgBox, D + /
 		}
-		Else If (UserInput = "texi")
+		Else If (UserInput = "texi" || UserInput = "thi")
 		{
 			MsgBox, R + L
 		}
-		Else If (UserInput = "dexi")
+		Else If (UserInput = "dexi" || UserInput = "dhi")
 		{
 			MsgBox, T + L
 		}
-		Else If (UserInput = "che")
+		Else If (UserInput = "che" || UserInput = "tye")
 		{
 			MsgBox, S + /
 		}
@@ -1124,46 +1126,46 @@ sc033::onKeyDown("_Comma")
 		{
 			MsgBox, E + I
 		}
-		Else If (UserInput = "hya")
-		{
-			MsgBox, E + Y
-		}
-		Else If (UserInput = "hyo")
-		{
-			MsgBox, E + H
-		}
-		Else If (UserInput = "hyu")
-		{
-			MsgBox, E + N
-		}
-		Else If (UserInput = "kya")
-		{
-			MsgBox, E + U
-		}
-		Else If (UserInput = "kyo")
-		{
-			MsgBox, E + J
-		}
-		Else If (UserInput = "kyu")
-		{
-			MsgBox, E + M
-		}
-		Else If (UserInput = "hye")
-		{
-			MsgBox, E + `;
-		}
-		Else If (UserInput = "tha")
-		{
-			MsgBox, E + `,
-		}
-		Else If (UserInput = "thu")
-		{
-			MsgBox, E + .
-		}
-		Else If (UserInput = "tho")
-		{
-			MsgBox, E + /
-		}
+		; Else If (UserInput = "hya")
+		; {
+		; 	MsgBox, E + Y
+		; }
+		; Else If (UserInput = "hyo")
+		; {
+		; 	MsgBox, E + H
+		; }
+		; Else If (UserInput = "hyu")
+		; {
+		; 	MsgBox, E + N
+		; }
+		; Else If (UserInput = "kya")
+		; {
+		; 	MsgBox, E + U
+		; }
+		; Else If (UserInput = "kyo")
+		; {
+		; 	MsgBox, E + J
+		; }
+		; Else If (UserInput = "kyu")
+		; {
+		; 	MsgBox, E + M
+		; }
+		; Else If (UserInput = "hye")
+		; {
+		; 	MsgBox, 新下駄にはなし。ひ＋ぇ
+		; }
+		; Else If (UserInput = "tha")
+		; {
+		; 	MsgBox, 新下駄にはなし。て＋ゃ
+		; }
+		; Else If (UserInput = "thu")
+		; {
+		; 	MsgBox, 新下駄にはなし。て＋ゅ
+		; }
+		; Else If (UserInput = "tho")
+		; {
+		; 	MsgBox, 新下駄にはなし。て＋ょ
+		; }
 		Else If (UserInput = "gyu")
 		{
 			MsgBox, R + O
@@ -1216,214 +1218,214 @@ sc033::onKeyDown("_Comma")
 		{
 			MsgBox, E + O
 		}
-		Else If (UserInput = "bya")
-		{
-			MsgBox, W + Y
-		}
-		Else If (UserInput = "byo")
-		{
-			MsgBox, W + H
-		}
-		Else If (UserInput = "byu")
-		{
-			MsgBox, W + N
-		}
-		Else If (UserInput = "gya")
-		{
-			MsgBox, W + U
-		}
-		Else If (UserInput = "gyo")
-		{
-			MsgBox, W + J
-		}
-		Else If (UserInput = "gyu")
-		{
-			MsgBox, W + M
-		}
-		Else If (UserInput = "bye")
-		{
-			MsgBox, W + `;
-		}
-		Else If (UserInput = "dha")
-		{
-			MsgBox, W + `,
-		}
-		Else If (UserInput = "dhu")
-		{
-			MsgBox, W + .
-		}
-		Else If (UserInput = "dho")
-		{
-			MsgBox, W + /
-		}
-		Else If (UserInput = "rya")
-		{
-			MsgBox, R + `;
-		}
-		Else If (UserInput = "ryo")
-		{
-			MsgBox, F + `;
-		}
-		Else If (UserInput = "ryu")
-		{
-			MsgBox, V + `;
-		}
-		Else If (UserInput = "mya")
-		{
-			MsgBox, T + `;
-		}
-		Else If (UserInput = "myo")
-		{
-			MsgBox, G + `;
-		}
-		Else If (UserInput = "myu")
-		{
-			MsgBox, B + `;
-		}
-		Else If (UserInput = "tsa")
-		{
-			MsgBox, A + `;
-		}
-		Else If (UserInput = "tsi")
-		{
-			MsgBox, Z + `;
-		}
-		Else If (UserInput = "tse")
-		{
-			MsgBox, X + `;
-		}
-		Else If (UserInput = "tso")
-		{
-			MsgBox, C + `;
-		}
-		Else If (UserInput = "rye")
-		{
-			MsgBox, Q + `;
-		}
-		Else If (UserInput = "pya")
-		{
-			MsgBox, A + Y
-		}
-		Else If (UserInput = "pyo")
-		{
-			MsgBox, A + H
-		}
-		Else If (UserInput = "pyu")
-		{
-			MsgBox, A + N
-		}
-		Else If (UserInput = "nya")
-		{
-			MsgBox, A + U
-		}
-		Else If (UserInput = "nyo")
-		{
-			MsgBox, A + J
-		}
-		Else If (UserInput = "nyu")
-		{
-			MsgBox, A + M
-		}
-		Else If (UserInput = "ye")
-		{
-			MsgBox, A + `,
-		}
-		Else If (UserInput = "nye")
-		{
-			MsgBox, A + .
-		}
-		Else If (UserInput = "mye")
-		{
-			MsgBox, A + /
-		}
-		Else If (UserInput = "pye")
-		{
-			MsgBox, A + P
-		}
-		Else If (UserInput = "sye")
-		{
-			MsgBox, R + J
-		}
-		Else If (UserInput = "je")
-		{
-			MsgBox, T + J
-		}
-		Else If (UserInput = "thi")
-		{
-			MsgBox, G + J
-		}
-		Else If (UserInput = "fa")
-		{
-			MsgBox, V + J
-		}
-		Else If (UserInput = "fi")
-		{
-			MsgBox, B + J
-		}
-		Else If (UserInput = "wi")
-		{
-			MsgBox, Z + J
-		}
-		Else If (UserInput = "we")
-		{
-			MsgBox, X + J
-		}
-		Else If (UserInput = "who")
-		{
-			MsgBox, C + J
-		}
-		Else If (UserInput = "dile")
-		{
-			MsgBox, F + Y
-		}
-		Else If (UserInput = "che")
-		{
-			MsgBox, F + U
-		}
-		Else If (UserInput = "dhi")
-		{
-			MsgBox, F + H
-		}
-		Else If (UserInput = "fe")
-		{
-			MsgBox, F + N
-		}
-		Else If (UserInput = "fo")
-		{
-			MsgBox, F + M
-		}
-		Else If (UserInput = "twu")
-		{
-			MsgBox, F + `,
-		}
-		Else If (UserInput = "dwu")
-		{
-			MsgBox, F + .
-		}
-		Else If (UserInput = "fyu")
-		{
-			MsgBox, F + /
-		}
-		Else If (UserInput = "va")
-		{
-			MsgBox, A + @
-		}
-		Else If (UserInput = "vi")
-		{
-			MsgBox, S + @
-		}
-		Else If (UserInput = "uxo")
-		{
-			MsgBox, D + @
-		}
-		Else If (UserInput = "ve")
-		{
-			MsgBox, F + @
-		}
-		Else If (UserInput = "vo")
-		{
-			MsgBox, G + @
-		}
+		; Else If (UserInput = "bya")
+		; {
+		; 	MsgBox, W + Y
+		; }
+		; Else If (UserInput = "byo")
+		; {
+		; 	MsgBox, W + H
+		; }
+		; Else If (UserInput = "byu")
+		; {
+		; 	MsgBox, W + N
+		; }
+		; Else If (UserInput = "gya")
+		; {
+		; 	MsgBox, W + U
+		; }
+		; Else If (UserInput = "gyo")
+		; {
+		; 	MsgBox, W + J
+		; }
+		; Else If (UserInput = "gyu")
+		; {
+		; 	MsgBox, W + M
+		; }
+		; Else If (UserInput = "bye")
+		; {
+		; 	MsgBox, W + `;
+		; }
+		; Else If (UserInput = "dha")
+		; {
+		; 	MsgBox, W + `,
+		; }
+		; Else If (UserInput = "dhu")
+		; {
+		; 	MsgBox, W + .
+		; }
+		; Else If (UserInput = "dho")
+		; {
+		; 	MsgBox, W + /
+		; }
+		; Else If (UserInput = "rya")
+		; {
+		; 	MsgBox, R + `;
+		; }
+		; Else If (UserInput = "ryo")
+		; {
+		; 	MsgBox, F + `;
+		; }
+		; Else If (UserInput = "ryu")
+		; {
+		; 	MsgBox, V + `;
+		; }
+		; Else If (UserInput = "mya")
+		; {
+		; 	MsgBox, T + `;
+		; }
+		; Else If (UserInput = "myo")
+		; {
+		; 	MsgBox, G + `;
+		; }
+		; Else If (UserInput = "myu")
+		; {
+		; 	MsgBox, B + `;
+		; }
+		; Else If (UserInput = "tsa")
+		; {
+		; 	MsgBox, A + `;
+		; }
+		; Else If (UserInput = "tsi")
+		; {
+		; 	MsgBox, Z + `;
+		; }
+		; Else If (UserInput = "tse")
+		; {
+		; 	MsgBox, X + `;
+		; }
+		; Else If (UserInput = "tso")
+		; {
+		; 	MsgBox, C + `;
+		; }
+		; Else If (UserInput = "rye")
+		; {
+		; 	MsgBox, Q + `;
+		; }
+		; Else If (UserInput = "pya")
+		; {
+		; 	MsgBox, A + Y
+		; }
+		; Else If (UserInput = "pyo")
+		; {
+		; 	MsgBox, A + H
+		; }
+		; Else If (UserInput = "pyu")
+		; {
+		; 	MsgBox, A + N
+		; }
+		; Else If (UserInput = "nya")
+		; {
+		; 	MsgBox, A + U
+		; }
+		; Else If (UserInput = "nyo")
+		; {
+		; 	MsgBox, A + J
+		; }
+		; Else If (UserInput = "nyu")
+		; {
+		; 	MsgBox, A + M
+		; }
+		; Else If (UserInput = "ye")
+		; {
+		; 	MsgBox, A + `,
+		; }
+		; Else If (UserInput = "nye")
+		; {
+		; 	MsgBox, A + .
+		; }
+		; Else If (UserInput = "mye")
+		; {
+		; 	MsgBox, A + /
+		; }
+		; Else If (UserInput = "pye")
+		; {
+		; 	MsgBox, A + P
+		; }
+		; Else If (UserInput = "sye")
+		; {
+		; 	MsgBox, R + J
+		; }
+		; Else If (UserInput = "je")
+		; {
+		; 	MsgBox, T + J
+		; }
+		; Else If (UserInput = "thi")
+		; {
+		; 	MsgBox, G + J
+		; }
+		; Else If (UserInput = "fa")
+		; {
+		; 	MsgBox, V + J
+		; }
+		; Else If (UserInput = "fi")
+		; {
+		; 	MsgBox, B + J
+		; }
+		; Else If (UserInput = "wi")
+		; {
+		; 	MsgBox, Z + J
+		; }
+		; Else If (UserInput = "we")
+		; {
+		; 	MsgBox, X + J
+		; }
+		; Else If (UserInput = "who")
+		; {
+		; 	MsgBox, C + J
+		; }
+		; Else If (UserInput = "dile")
+		; {
+		; 	MsgBox, F + Y
+		; }
+		; Else If (UserInput = "che")
+		; {
+		; 	MsgBox, F + U
+		; }
+		; Else If (UserInput = "dhi")
+		; {
+		; 	MsgBox, F + H
+		; }
+		; Else If (UserInput = "fe")
+		; {
+		; 	MsgBox, F + N
+		; }
+		; Else If (UserInput = "fo")
+		; {
+		; 	MsgBox, F + M
+		; }
+		; Else If (UserInput = "twu")
+		; {
+		; 	MsgBox, F + `,
+		; }
+		; Else If (UserInput = "dwu")
+		; {
+		; 	MsgBox, F + .
+		; }
+		; Else If (UserInput = "fyu")
+		; {
+		; 	MsgBox, F + /
+		; }
+		; Else If (UserInput = "va")
+		; {
+		; 	MsgBox, A + @
+		; }
+		; Else If (UserInput = "vi")
+		; {
+		; 	MsgBox, S + @
+		; }
+		; Else If (UserInput = "uxo")
+		; {
+		; 	MsgBox, D + @
+		; }
+		; Else If (UserInput = "ve")
+		; {
+		; 	MsgBox, F + @
+		; }
+		; Else If (UserInput = "vo")
+		; {
+		; 	MsgBox, G + @
+		; }
 		Else If (UserInput = "she")
 		{
 			MsgBox, S + Y
@@ -1432,27 +1434,27 @@ sc033::onKeyDown("_Comma")
 		{
 			MsgBox, S + P
 		}
-		Else If (UserInput = "xa")
+		Else If (UserInput = "xa" || UserInput = "la")
 		{
 			MsgBox, 1 + K
 		}
-		Else If (UserInput = "xi")
+		Else If (UserInput = "xi" || UserInput = "li")
 		{
 			MsgBox, 2 + K
 		}
-		Else If (UserInput = "xu")
+		Else If (UserInput = "xu" || UserInput = "lu")
 		{
 			MsgBox, 3 + K
 		}
-		Else If (UserInput = "xe")
+		Else If (UserInput = "xe" || UserInput = "le")
 		{
 			MsgBox, 4 + K
 		}
-		Else If (UserInput = "xo")
+		Else If (UserInput = "xo" || UserInput = "lo")
 		{
 			MsgBox, 5 + K
 		}
-		Else If (UserInput = "xya")
+		Else If (UserInput = "xya" || UserInput = "lya")
 		{
 			MsgBox, 1 + L
 		}
@@ -1468,11 +1470,11 @@ sc033::onKeyDown("_Comma")
 		{
 			MsgBox, 4 + L
 		}
-		Else If (UserInput = "xwa")
+		Else If (UserInput = "xwa" || UserInput = "lwa")
 		{
 			MsgBox, 5 + L
 		}
-		Else If (UserInput = "xyu")
+		Else If (UserInput = "xyu" || UserInput = "lyu")
 		{
 			MsgBox, 1 + I
 		}
@@ -1488,7 +1490,7 @@ sc033::onKeyDown("_Comma")
 		{
 			MsgBox, 4 + I
 		}
-		Else If (UserInput = "xyo")
+		Else If (UserInput = "xyo" || UserInput = "lyo")
 		{
 			MsgBox, 1 + O
 		}
@@ -1504,7 +1506,12 @@ sc033::onKeyDown("_Comma")
 		{
 			MsgBox, 4 + O
 		}
+		Else
+		{
+			MsgBox, 新下駄にはないか、ローマ字入力が想定外。
+		}
 		
 	}
+	MenuTypingValue = curTypingMode
 	IME_SET(ime_mode)
 Return
