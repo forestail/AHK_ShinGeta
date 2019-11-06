@@ -24,10 +24,10 @@ Menu, Tray, Uncheck, Typing Mode
 Menu_Typing(){
   if(MenuTypingValue = 1){
     Menu, Tray, Uncheck, Typing Mode
-    MenuTypingValue=0
+    MenuTypingValue:=0
   }else{
     Menu, Tray, Check, Typing Mode
-    MenuTypingValue=1
+    MenuTypingValue:=1
   }
 }
 
@@ -747,6 +747,8 @@ sc033::onKeyDown("_Comma")
 
 	MenuTypingValue = 0
 	InputBox, UserInput, 補助, 入力方法を調べたい文字のローマ字を入力, , 300, 130
+	MenuTypingValue := curTypingMode
+	IME_SET(ime_mode)
 	If (ErrorLevel = 0)
 	{
 		; MsgBox, You entered "%UserInput%"
@@ -1509,9 +1511,6 @@ sc033::onKeyDown("_Comma")
 		Else
 		{
 			MsgBox, 新下駄にはないか、ローマ字入力が想定外。
-		}
-		
+		}	
 	}
-	MenuTypingValue = curTypingMode
-	IME_SET(ime_mode)
 Return
