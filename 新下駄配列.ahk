@@ -517,6 +517,7 @@ SetInputDef()
 
 SetInputDef(){
 	if(RomeKana = 0){
+		; ローマ字入力時の定義
 		; 以下でシングルストロークで send する文字列を定義します
 		singleStroke_Q=-	;ー
 		singleStroke_W=ni	;に
@@ -840,6 +841,7 @@ SetInputDef(){
 		kCmb202:=flag_Slash|flag_RBracket	; ↓
 		resultOfKCmb202=⇒{Enter}
 	}else{
+		; かな入力時の定義
 		; 以下でシングルストロークで send する文字列を定義します
 		singleStroke_Q=|	;ー
 		singleStroke_W=i	;に
@@ -1068,7 +1070,7 @@ SetInputDef(){
 		kCmb153:=flag_U|flag_H	; ／
 		resultOfKCmb153=【】{Enter}{Left}
 		kCmb155:=flag_H|flag_J	; （）
-		resultOfKCmb155=+8+9{Enter}{Left}
+		resultOfKCmb155=+8+9{F9}{Enter}{Left}
 		kCmb157:=flag_K|flag_L	; ]
 		resultOfKCmb157=]
 		kCmb158:=flag_K|flag_N	; \
@@ -1136,21 +1138,21 @@ SetInputDef(){
 		kCmb189:=flag_S|flag_7	; 。
 		resultOfKCmb189=+.
 		kCmb190:=flag_S|flag_8	; （
-		resultOfKCmb190=+8
+		resultOfKCmb190=+8{F9}
 		kCmb191:=flag_S|flag_9	; ）
-		resultOfKCmb191=+9
+		resultOfKCmb191=+9{F9}
 		kCmb192:=flag_S|flag_0	; ：
-		resultOfKCmb192=`:
+		resultOfKCmb192=`:{F9}
 		kCmb193:=flag_S|flag_Hiphen	; ＊
-		resultOfKCmb193=+`:
+		resultOfKCmb193=+`:{F9}
 		kCmb194:=flag_F|flag_V	; ！
-		resultOfKCmb194=+1
+		resultOfKCmb194=+1{F9}
 		kCmb195:=flag_F|flag_B	; ！
-		resultOfKCmb195=+1
+		resultOfKCmb195=+1{F9}
 		kCmb196:=flag_N|flag_J	; ？
-		resultOfKCmb196=?
+		resultOfKCmb196=?{F9}
 		kCmb197:=flag_R|flag_F	; ・
-		resultOfKCmb197=/
+		resultOfKCmb197=・{Enter}
 		kCmb198:=flag_SColon|flag_RBracket	; →
 		resultOfKCmb198=→{Enter}
 		kCmb199:=flag_L|flag_RBracket	; ←
