@@ -930,7 +930,7 @@ SetInputDef(){
 		kCmb20:=flag_D|flag_P	; うぇ
 		resultOfKCmb20=4+5
 		kCmb21:=flag_D|flag_H	; へ
-		resultOfKCmb21=^
+		resultOfKCmb21=~
 		kCmb22:=flag_D|flag_J	; あ
 		resultOfKCmb22=3
 		kCmb23:=flag_D|flag_SColon	; え
