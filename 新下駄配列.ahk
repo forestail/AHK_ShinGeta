@@ -1056,7 +1056,7 @@ SetInputDef(){
 		kCmb145:=flag_S|flag_D	; [
 		resultOfKCmb145=[
 		kCmb147:=flag_F|flag_G	; 「」
-		resultOfKCmb147=[]{Enter}{Left}
+		resultOfKCmb147=+[+]{Enter}{Left}
 		kCmb148:=flag_D|flag_V	; @
 		resultOfKCmb148=@
 		kCmb149:=flag_X|flag_C	; {
